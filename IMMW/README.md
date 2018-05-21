@@ -4,6 +4,9 @@ Hilarity Ensues is a movie information aggregator site with movie trailers. It i
 ##### Pro tip:
 Try saying, "and hilarity ensues" at the end of any movie summary for _unbelievably_ entertaining results.
 
+## Usage
+Type ```#python entertainment_center.py``` into the terminal to execute code, and open a browser tab with the movie website.
+
 ## Planned Features
 - "Director" class
 - "TvShow" class
