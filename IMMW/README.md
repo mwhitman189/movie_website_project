@@ -14,3 +14,5 @@ Type ```python entertainment_center.py``` (or ```python3 entertainment_center.py
 
 ## License
 Hilarity Ensues falls under the [MIT license](IMMW/LICENSE.txt), and is therefore free to use, copy, publish, or distribute for personal or commercial use.
+
+Thank you to [YouTube](https://s3.amazonaws.com/udacity-hosted-downloads/ud036/fresh_tomatoes.py) for the movie trailers, and to [IMDB](https://www.imdb.com/) for the movie poster images.
