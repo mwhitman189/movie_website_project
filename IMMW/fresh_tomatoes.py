@@ -2,8 +2,6 @@ import webbrowser
 import os
 import re
 
-# Search for keyword: "unfinished" to find unifinished sections
-
 
 # Styles and scripting for the page
 main_page_head = '''
@@ -18,49 +16,62 @@ main_page_head = '''
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
+
         body {
             padding-top: 80px;
-            background-color: #82CC49;
-            color: #0B0C0B;
+            background-color: #82cc49;
+            color: #0b0c0b;
         }
+
+        /* header */
         .navbar-inverse .navbar-brand {
-            color: #A2ED69;
+            color: #a2ed69;
         }
+
         .navbar-inverse:hover .navbar-brand:hover {
-            color: #FFFFFF;
+            color: #fff;
         }
+
         .navbar-brand {
             font-family: Palatino, Georgia;
             font-size: 2em;
         }
+
+        /* content */
         #trailer .modal-dialog {
             margin-top: 100px;
             width: 640px;
             height: 480px;
         }
+
         .hanging-close {
             position: absolute;
             top: -12px;
             right: -12px;
             z-index: 9001;
         }
+
         #trailer-video {
             width: 100%;
             height: 100%;
         }
+
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
         }
+
         .movie-tile:hover {
-            background-color: #A2ED69;
+            background-color: #a2ed69;
             cursor: pointer;
             box-shadow: 5px 5px 7px #121711;
         }
+
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
         }
+
         .scale-media iframe {
             border: none;
             height: 100%;
@@ -70,8 +81,10 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
+
     </style>
-    <script type="text/javascript" charset="utf-8">
+
+    <script charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
             // Remove the src so the player itself gets removed, as this is the only
@@ -96,14 +109,17 @@ main_page_head = '''
           });
         });
     </script>
+
 </head>
 '''
 
 # The main page layout and title bar
 main_page_content = '''
 <!DOCTYPE html>
+
 <html lang="en">
   <body>
+
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
       <div class="modal-dialog">
@@ -119,13 +135,13 @@ main_page_content = '''
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Hilarity Ensues! Movie Trailers</a>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
     <div class="container">
       {movie_tiles}

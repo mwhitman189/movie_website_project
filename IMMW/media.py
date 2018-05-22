@@ -1,6 +1,5 @@
 import webbrowser
 
-# Search for keyword: "unfinished" to find unifinished sections
 
 
 class Video():
@@ -37,7 +36,7 @@ class Movie(Video):
         webbrowser.open(self.trailer_youtube_url)
 
 
-# -- unfinished
+# TODO: Create tvshow class
 # class TvShow(Video):
 #    """ This class provides a way to store TV program related information"""
 #    def __init__(self, title, duration, season, episode, tv_station):
